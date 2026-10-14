@@ -69,7 +69,7 @@ export class AgentFactory {
         },
         model: {
           provider: 'google',
-          modelName: 'gemini-1.5-flash',
+          modelName: 'gemini-2.0-flash',
           temperature: 0.7,
           maxTokens: 2048,
         },
@@ -111,7 +111,7 @@ export class AgentFactory {
         },
         model: {
           provider: 'google',
-          modelName: 'gemini-1.5-flash',
+          modelName: 'gemini-2.0-flash',
           temperature: 0.5,
           maxTokens: 2048,
         },
@@ -155,7 +155,7 @@ export class AgentFactory {
         },
         model: {
           provider: 'google',
-          modelName: 'gemini-1.5-flash',
+          modelName: 'gemini-2.0-flash',
           temperature: 0.3,
           maxTokens: 4096,
         },
@@ -196,7 +196,7 @@ export class AgentFactory {
         },
         model: {
           provider: 'google',
-          modelName: 'gemini-1.5-flash',
+          modelName: 'gemini-2.0-flash',
           temperature: 0.8,
           maxTokens: 2048,
         },
@@ -237,7 +237,7 @@ export class AgentFactory {
         },
         model: {
           provider: 'google',
-          modelName: 'gemini-1.5-flash',
+          modelName: 'gemini-2.0-flash',
           temperature: 0.5,
           maxTokens: 2048,
         },
@@ -276,7 +276,7 @@ export class AgentFactory {
         },
         model: {
           provider: 'google',
-          modelName: 'gemini-1.5-flash',
+          modelName: 'gemini-2.0-flash',
           temperature: 0.9,
           maxTokens: 1024,
         },
@@ -316,7 +316,7 @@ export class AgentFactory {
         },
         model: {
           provider: 'google',
-          modelName: 'gemini-1.5-flash',
+          modelName: 'gemini-2.0-flash',
           temperature: 0.4,
           maxTokens: 2048,
         },
@@ -357,7 +357,7 @@ export class AgentFactory {
         },
         model: {
           provider: 'google',
-          modelName: 'gemini-1.5-flash',
+          modelName: 'gemini-2.0-flash',
           temperature: 0.5,
           maxTokens: 1024,
         },
