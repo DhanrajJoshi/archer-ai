@@ -26,14 +26,18 @@ export interface HealthStatus {
   tools: number;
 }
 
+// Empty in browser dev (Vite proxies /api to the backend); set VITE_API_URL
+// to an absolute backend URL when building the Android app bundle.
+const API_BASE: string = import.meta.env.VITE_API_URL ?? '';
+
 export async function fetchHealth(): Promise<HealthStatus> {
-  const res = await fetch('/api/health');
+  const res = await fetch(`${API_BASE}/api/health`);
   if (!res.ok) throw new Error(`Health check failed (${res.status})`);
   return res.json();
 }
 
 export async function fetchAgents(): Promise<AgentInfo[]> {
-  const res = await fetch('/api/agents');
+  const res = await fetch(`${API_BASE}/api/agents`);
   if (!res.ok) throw new Error(`Failed to load agents (${res.status})`);
   return res.json();
 }
@@ -42,7 +46,7 @@ export async function sendMessage(
   message: string,
   agentId: string | null
 ): Promise<ChatResponse> {
-  const res = await fetch('/api/chat', {
+  const res = await fetch(`${API_BASE}/api/chat`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ message, agentId }),
