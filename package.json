@@ -11,9 +11,14 @@
     "build": "npm run build:backend && npm run build:frontend",
     "build:backend": "cd backend && npm run build",
     "build:frontend": "cd frontend && npm run build",
-    "start": "node dist/index.js",
-    "test": "vitest",
-    "type-check": "tsc --noEmit"
+    "start": "npm run start:backend",
+    "start:backend": "cd backend && npm run start",
+    "mobile:sync": "cd frontend && npm run mobile:sync",
+    "mobile:apk": "cd frontend && npm run mobile:apk",
+    "test": "npm run type-check",
+    "type-check": "npm run type-check:backend && npm run type-check:frontend",
+    "type-check:backend": "cd backend && npm run type-check",
+    "type-check:frontend": "cd frontend && npm run type-check"
   },
   "keywords": [
     "ai-agent",

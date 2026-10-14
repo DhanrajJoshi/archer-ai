@@ -240,7 +240,7 @@ ${userMessage}
 
   private parseToolUses(response: string): ToolUse[] {
     const toolUses: ToolUse[] = [];
-    const toolPattern = /\[TOOL: ([^\]]+)\]\n?([^[]*?)\[/TOOL\]/gs;
+    const toolPattern = /\[TOOL: ([^\]]+)\]\n?([^[]*?)\[\/TOOL\]/gs;
     let match;
 
     while ((match = toolPattern.exec(response)) !== null) {
